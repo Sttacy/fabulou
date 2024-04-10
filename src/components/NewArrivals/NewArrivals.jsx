@@ -8,7 +8,7 @@ const NewArrivals = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
+    fetch('https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
       .then(response => response.json())
       .then(data => {
         const selectedProducts = data.slice(0, 9);
