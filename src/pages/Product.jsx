@@ -15,28 +15,24 @@ const Product = () => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
 
-    if (!singleProduct) return <Loader classes="h-screen" />;
+    if (!singleProduct || isLoading) {
+        return <Loader classes="h-screen" />;
+    }
 
     return (
         <div>
-            {isLoading ? (
-                <Loader classes="h-screen" />
-            ) : (
-                <ProductPreview 
-                    name={singleProduct.name}
-                    img={singleProduct.api_featured_image}
-                    type={singleProduct.product_type}
-                    category={singleProduct.category}
-                    price={singleProduct.price}
-                    description={singleProduct.description}
-                />
-            )}
-
+            <ProductPreview 
+                name={singleProduct.name}
+                img={singleProduct.api_featured_image}
+                type={singleProduct.product_type}
+                category={singleProduct.category}
+                price={singleProduct.price}
+                description={singleProduct.description}
+            />
             <Benefits />
             <RecommendedProducts product={singleProduct} />
             <ProductAdd/>
         </div>
     );
 };
-
 export default Product;
