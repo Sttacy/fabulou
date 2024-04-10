@@ -19,21 +19,19 @@ const useGetProduct = () => {
 
   const getSingleProduct = useCallback(() => {
     setIsLoading(true);
-    axios
-      .get(`${BASE_URL}/${id}.json`)
-      .then((response) => {
-        const data = formatProduct(response.data);
-        setSingleProduct(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching product:", error);
-        setIsLoading(false);
-      });
+    axios.get(`${BASE_URL}/${id}.json`).then((response) => {
+      const data = formatProduct(response.data);
+      setSingleProduct(data);
+    });
   }, [id]);
 
   useEffect(() => {
     getSingleProduct();
   }, [id, getSingleProduct]);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, [singleProduct]);
 
   return {
     isLoading,
