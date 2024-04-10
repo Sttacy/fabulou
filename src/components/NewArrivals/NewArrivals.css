@@ -1,0 +1,58 @@
+  .product-column {
+    padding: 0 120px;
+    column-count: 3;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .productCard {
+    width: 300px !important;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+
+  .product-card img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+.SeeMore {
+    border-radius: 50px;
+      align-items: center;
+      font-size: 16px;
+      position: relative;
+      left: 87%;
+    background-color: #ffffff00;
+    color:  black;
+    width: 10em;
+    height: 3em;
+      border:  rgb(204, 165, 170) 0.15em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+  }
+
+  .SeeMore:hover {
+    background-color: rgb(253, 247, 247) ;
+    cursor: pointer;
+  }
+
+  .SeeMore svg {
+    width: 1.6em;
+    margin: -0.3em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+
+  .SeeMore:hover svg {
+    transform: translateX(5px);
+  }
+
+  .text {
+    margin: 0 1.5em
+  }

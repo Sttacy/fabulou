@@ -1,0 +1,18 @@
+.point{
+    background-color: #7dd8cf;
+    width: 6px;
+    border-radius: 100px;
+    height: 6px;
+}
+.flex1{
+    display: flex;
+    justify-content: center;
+}
+.slogan{
+    font-size: 22px;
+}
+.brandLink{
+  margin: 20px 0 20px 0; 
+  font-size: 25px;
+  color: rgb(38, 38, 38);
+}

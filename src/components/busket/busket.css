@@ -1,0 +1,103 @@
+.basket-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 60vh;
+}
+.basket-container h2{
+    font-weight: 600;
+    font-family: "Raleway", serif;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    border: 1px solid #b9b7b7;
+}
+
+.quantity-button {
+    color: black;
+    border: none;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.remove-button {
+    margin:0 2% 0 2%;
+    color: black;
+    background-color: transparent;
+    border: none;
+    padding:0px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.686);
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.itemName{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+.items .spanPrice{
+    position: relative;
+    background-color: #dfded4;
+    height: 2vw;
+    border-radius: 100px;
+    width: 2vw;
+    top: 0px;
+    z-index: -1;
+}
+.itemPrice{
+    padding: 25% 0 0 30% ;
+    font-weight: 600;
+}
+.item-quantity{
+    font-size: 17px;
+}
+.total{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3%;
+}
+.clear-button {
+    margin-right: 10px;
+    color: #fff;
+    background-color: black;
+    text-transform: uppercase;
+    transition: all .35s ease;
+    padding: 7px 20px;
+    font-weight: 500;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin: 0 !important;
+}
+
+.reset-button:hover {
+    background-color: #c82333;
+}

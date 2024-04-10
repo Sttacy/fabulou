@@ -1,0 +1,56 @@
+.aboutUsInfo{
+    position: relative;
+    height: 80vh;
+    top: 20vh;
+    width: 60vh;
+    left: 6%;
+}
+.aboutUsInfo img{
+    width: 30px ;
+    height: 30px;
+}
+.theProducts{
+    letter-spacing: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+.aboutUsInfo h2{
+    margin: 4% 0 2% 0;
+    font-family: "Raleway", serif;
+    font-size: 25px;
+}
+.aboutUsInfo p {
+    letter-spacing: 1.5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+.fabulous{
+    font-size: 16px;
+    text-transform: capitalize;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.flexAbout{
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+    width: 100%;
+justify-content: space-between;
+}
+.left , .right{
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+.left h5 , .right h5{
+    margin: 2% 0;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+}
+.left p , .right p{
+    margin: 0;
+    font-size: 13px;
+    font-family: "Ubuntu", sans-serif;
+}
+.infoLeft , .infoRight{
+    margin-left: 7%;
+}

@@ -1,0 +1,35 @@
+.benefits{
+display: flex;
+justify-content: space-around;
+margin: 70px 50px ;
+}
+.flexBenefit{
+    width: 350px;
+    display: flex;
+    align-items: center;
+}
+.relative{
+    position: relative;
+    margin-right: 10px;
+
+}
+.absolute{
+    position: absolute;
+    background-color: #9cebe3;
+    height: 3vw;
+    border-radius: 100px;
+    width: 3vw;
+    top: 20px;
+    z-index: -1;
+}
+.titleBenefits{
+font-size: 20px;
+margin: 0 0 15px 0!important;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.pBenefits{
+    letter-spacing: 0.5px !important;
+    margin: 0 !important;
+    color: rgb(53, 53, 53);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

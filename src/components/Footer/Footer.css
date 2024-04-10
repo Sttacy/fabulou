@@ -1,0 +1,93 @@
+body{
+    letter-spacing: 1px;
+}
+.blockFooterInfo {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 20px;
+    background-color: #f5f5f5;
+    letter-spacing: 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.blockFooterInfo .first {
+    flex: 1;
+    max-width: 300px;
+}
+.iconsApp{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.iconsApp a{
+   color: rgb(181, 179, 179);
+}
+.blockFooterInfo .second,
+.blockFooterInfo .third,
+.blockFooterInfo .subscribe {
+    flex: 1;
+    max-width: 200px;
+}
+.blockFooterInfo .second{
+    cursor: pointer;
+}
+.blockFooterInfo h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.blockFooterInfo p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.blockFooterInfo ul {
+    padding: 0;
+    margin: 0;
+}
+
+.blockFooterInfo ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.blockFooterInfo ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+.subscribe form {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.submit-button {
+    background-color: #2d82dd;
+    color: #fff;
+    border: none;
+    padding: 7px 17px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.arrow-icon {
+    fill: #fff;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover .arrow-icon {
+    transform: translateX(5px);
+}

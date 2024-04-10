@@ -1,0 +1,33 @@
+.TopBarProducts .div{
+    display: flex;  
+    align-items: center;
+}
+.TopBarProducts .productCard{
+    margin-bottom: 7%;
+}
+.popularSidebar{
+    margin: 20% 0 6% 0 !important;
+}
+.TopBarProducts .div .eachCard img{
+    width: 70px !important;
+    height: 70px !important;
+  
+}
+.TopBarProducts .priceBrand{
+    font-size: 14px !important;
+}
+.TopBarProducts .brandp{
+    display: none;
+}
+.TopBarProducts .div .eachCard{
+    margin-right: 2%;
+    height: auto;
+}
+.TopBarProducts .div .productName{
+    font-size: 12px;
+    font-weight: 600;
+}
+.TopBarProducts .div .priceBrand {
+text-align: start;
+font-size: 11px;
+}

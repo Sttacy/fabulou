@@ -1,0 +1,107 @@
+.infoPage{
+  background-color: #f9f9f9;  
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  padding-top: 1%;
+}
+.infoElegance{
+    width: 60%;
+    margin: 7% 5%;
+}
+.infoElegance h3{
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+}
+.infoElegance p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.flexIcons{
+    width: 30%;
+}
+.flexIconInfo{
+    display: flex;
+    align-items: center;
+}
+.flexIconInfo h2{
+    margin-left: 2%;
+}
+.textIcon h4{
+   margin: 0;
+   padding: 0;
+   font-size: 15px;
+}
+.textIcon p{
+    font-size: 14px;
+    width: 90%;
+}
+.iconsInfo{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+.contact{
+    margin: 4% 0 ;
+text-align: center;
+
+}
+.contact h2{
+    margin: 0 !important;
+    font-family: "Montserrat", sans-serif;
+}
+.contact p{
+    margin-bottom: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+.flexMessage{
+    display: flex;
+    justify-content: center;
+}
+.form_name {
+    width: 920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact input,
+  .contact textarea {
+    width: 905px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .contact input[type="text"] , .contact input[type="tel"] , .contact input[type="email"] , .contact textarea{
+    padding: 15px 0 15px 15px;
+  }
+  .contact input[type="text"]::placeholder , .contact input[type="tel"]::placeholder , .contact input[type="email"]::placeholder , .contact textarea::placeholder {
+    font-size: 18px;
+  }
+  .contact .form_name input[type="text"] {
+    width: 430px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .contact input[type="submit"]
+   {
+    width: 12%;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 50px;
+    transition: 0.8s ease;
+    color: black;
+    border: gray solid 1px;
+    padding: 12px;
+    cursor: pointer;
+  }
+  .contact input[type="submit"]:hover {
+    color: black;
+    border: gray solid 1px;
+    border-radius: 50px;
+    transition: 0.8s ease;
+    background-color: transparent;
+  }
+  

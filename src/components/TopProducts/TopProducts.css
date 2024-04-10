@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Raleway:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+.swiper-wrapper{
+    text-align: center;
+    margin-left: 50px;
+}
+.swiper-slide{
+    width: 400px !important;
+}
+.swiper-button-prev, .swiper-button-next{
+    padding: 0 30px;
+    color: #6ac1b8 !important;
+}
+.TopCards .eachCard img{
+width: 200px !important;
+}
+.new{
+    margin-top: 65px;
+    text-align: center;
+    margin-bottom:  0 !important;
+    font-weight: 500;
+    font-size: 60px;
+    font-family: "Cinzel", serif;
+}
+.sloganP{
+    margin-top:  0 !important;
+    margin-bottom: 90px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+.brandCard{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+}

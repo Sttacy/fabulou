@@ -1,0 +1,51 @@
+.ProductPage{
+    display: flex;
+    justify-content: center;
+}
+.flexPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+}
+.infoProductPage{
+    width: 50%;
+    margin: 3% 0 0 5%;
+
+}
+.ProductPage .relative{
+    width: 20%;
+}
+.ProductPage .spanPrice{
+        position: absolute;
+        background-color: #e6ecd5;
+        height: 3vw;
+        border-radius: 100px;
+        width: 3vw;
+        top: 20px;
+        z-index: -1;
+}
+.ProductPage .priceBrand{
+    margin-top: 37%;
+    margin-left: 20%;
+    width: auto;
+    font-size: 20px !important;
+}
+.ProductPage .buttonToBasket{
+    height: 5vh;
+    margin-top: 3%;
+}
+.ProductPage  .buttonToBasket {
+    border: #45cec0 solid 2.5px;
+    background-color: transparent;
+    color: black;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ProductPage  .buttonToBasket:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #9cebe3;
+}
