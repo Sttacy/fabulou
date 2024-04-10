@@ -9,7 +9,7 @@ const useGetTopProducts = (brand) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getRandomProductTag = async () => {
+    const getTopProducts = async () => {
       try {
         const response = await axios.get(`${BASE_URL}.json`, {
           params: {
@@ -21,12 +21,12 @@ const useGetTopProducts = (brand) => {
         setProducts(selectedProducts);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching products:", error);
+        console.error("Error fetching top products:", error);
         setLoading(false);
       }
     };
 
-    getRandomProductTag();
+    getTopProducts();
   }, [brand]);
 
   return { products, loading };

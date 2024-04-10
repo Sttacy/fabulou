@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ProductCard from '../ProductCard';
 import Loader from '../Loader';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; 
+import 'swiper/swiper-bundle.css';
 import './TopProducts.css';
 import { Navigation } from 'swiper/modules';
 import useGetTopProducts from '../../hooks/useGetTopProducts';
@@ -24,13 +24,13 @@ const TopProducts = () => {
         spaceBetween={20}
         pagination={{ clickable: true }}
         navigation={true}
-        className="mySwiper"
+        className='mySwiper'
         rewind={true}
         modules={[Navigation]}
       >
-        {products.map(product => (
+        {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <ProductCard 
+            <ProductCard
               id={product.id}
               name={product.name}
               brand={product.brand}
