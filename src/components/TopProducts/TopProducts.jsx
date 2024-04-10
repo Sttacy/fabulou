@@ -11,7 +11,7 @@ const TopProducts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique')
+    fetch('https://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique')
       .then(response => response.json())
       .then(data => {
         const selectedProducts = data.slice(1, 9);
