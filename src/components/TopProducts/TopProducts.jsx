@@ -8,7 +8,7 @@ import { Navigation } from 'swiper/modules';
 import useGetTopProducts from '../../hooks/useGetTopProducts';
 
 const TopProducts = () => {
-  const { products, loading } = useGetTopProducts('maybelline'); // Fetch top products with the specified brand
+  const { products, loading } = useGetTopProducts('clinique')
 
   if (loading) {
     return <Loader />;
