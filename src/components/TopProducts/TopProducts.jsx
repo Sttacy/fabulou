@@ -5,55 +5,42 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; 
 import './TopProducts.css';
 import { Navigation } from 'swiper/modules';
+import useGetTopProducts from '../../hooks/useGetTopProducts';
 
 const TopProducts = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { products, loading } = useGetTopProducts('maybelline'); // Fetch top products with the specified brand
 
-  useEffect(() => {
-    fetch('https://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique')
-      .then(response => response.json())
-      .then(data => {
-        const selectedProducts = data.slice(1, 9);
-        setProducts(selectedProducts);
-        setLoading(false);
-      })
-      .catch(error => console.error('Error fetching products:', error));
-  }, []);
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
-    <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className='TopCards'>
-        <h2 className='new'>NEW</h2>
-        <p className='sloganP'>Highlight the perfection in you</p>
-        <Swiper
-          slidesPerView={3}
-          centeredSlides={false}
-          spaceBetween={20}
-          pagination={{ clickable: true }}
-          navigation={true}
-          className="mySwiper"
-          rewind={true}
-          modules={[Navigation]}
-        >
-          {products.map(product => (
-            <SwiperSlide key={product.id}>
-              <ProductCard 
-                id={product.id}
-                name={product.name}
-                brand={product.brand}
-                imgUrl={product.image_link}
-                price={product.price}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        </div>
-      )}
-    </>
+    <div className='TopCards'>
+      <h2 className='new'>NEW</h2>
+      <p className='sloganP'>Highlight the perfection in you</p>
+      <Swiper
+        slidesPerView={3}
+        centeredSlides={false}
+        spaceBetween={20}
+        pagination={{ clickable: true }}
+        navigation={true}
+        className="mySwiper"
+        rewind={true}
+        modules={[Navigation]}
+      >
+        {products.map(product => (
+          <SwiperSlide key={product.id}>
+            <ProductCard 
+              id={product.id}
+              name={product.name}
+              brand={product.brand}
+              imgUrl={product.image_link}
+              price={product.price}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

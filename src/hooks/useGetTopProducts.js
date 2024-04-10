@@ -1,40 +1,35 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-import { PRODUCT_TAGS } from '../utils/tags';
+const PRODUCTS_COUNT = 9;
+const BASE_URL = "https://makeup-api.herokuapp.com/api/v1/products";
 
-const PRODUCTS_COUNT = 3;
-const BASE_URL = 'http://makeup-api.herokuapp.com/api/v1/products';
+const useGetTopProducts = (brand) => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-const getRandomProductTag = () => {
-    const randomNumber = Math.floor(Math.random() * PRODUCT_TAGS.length);
-
-    return PRODUCT_TAGS[randomNumber];
-};
-
-const useGetTopProducts = () => {
-    const [products, setProducts] = useState([]);
-
-    const getTopProducts = () => {
-        axios
-            .get(`${BASE_URL}.json`, {
-                params: {
-                    product_tags: getRandomProductTag(),
-                },
-            })
-            .then(response => {
-                const { data } = response;
-                data.length = data.length > PRODUCTS_COUNT ? PRODUCTS_COUNT : data.length;
-
-                setProducts(data);
-            });
+  useEffect(() => {
+    const getRandomProductTag = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}.json`, {
+          params: {
+            brand: brand,
+          },
+        });
+        const data = response.data;
+        const selectedProducts = data.slice(0, PRODUCTS_COUNT);
+        setProducts(selectedProducts);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+        setLoading(false);
+      }
     };
 
-    useEffect(() => {
-        getTopProducts();
-    }, []);
+    getRandomProductTag();
+  }, [brand]);
 
-    return products;
+  return { products, loading };
 };
 
 export default useGetTopProducts;
