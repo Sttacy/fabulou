@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const PRODUCTS_COUNT = 9;
+const PRODUCTS_COUNT = 10;
 const BASE_URL = "https://makeup-api.herokuapp.com/api/v1/products";
 
 const useGetTopProducts = (brand) => {
@@ -17,7 +17,7 @@ const useGetTopProducts = (brand) => {
           },
         });
         const data = response.data;
-        const selectedProducts = data.slice(0, PRODUCTS_COUNT);
+        const selectedProducts = data.slice(1, PRODUCTS_COUNT);
         setProducts(selectedProducts);
         setLoading(false);
       } catch (error) {
